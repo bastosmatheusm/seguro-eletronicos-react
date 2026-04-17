@@ -109,7 +109,7 @@ export default function Navbar() {
                 className="block w-full text-center px-5 py-2.5 border border-white/15 hover:border-white/30 text-white text-sm font-semibold rounded-lg transition-all"
                 onClick={() => setMobileOpen(false)}
               >
-                Admin
+                Painel Administrativo
               </a>
 
             </div>

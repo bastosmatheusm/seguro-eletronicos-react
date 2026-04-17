@@ -89,7 +89,7 @@ export default function HeroSection() {
                 Seguro de Eletrônicos{" "}
                 <span className="text-blue-400 text-blue-glow">Inteligente</span>
                 <br />
-                para Profissionais
+                para Todos
               </h1>
               <p className="text-lg lg:text-xl text-slate-400 leading-relaxed max-w-lg">
                 RiverGuard: Proteção rápida, eficiente e confiável para seus dispositivos. Processamento automático, sem burocracia.
@@ -104,7 +104,7 @@ export default function HeroSection() {
                 "Sem vistoria prévia para dispositivos até R$5.000",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2.5 text-slate-300 text-sm">
-                  <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                  <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />
                   {item}
                 </li>
               ))}
