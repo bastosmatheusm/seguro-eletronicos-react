@@ -126,10 +126,10 @@ export default function SolutionSection() {
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <a
-            href="#planos"
+            href="#contato"
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
           >
-            Ver Planos de Cobertura
+            Entrar em Contato
           </a>
         </div>
       </div>

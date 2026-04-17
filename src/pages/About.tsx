@@ -4,59 +4,92 @@
    Página sobre a empresa RiverTech - desenvolvedora de qualidade
    ============================================================= */
 
-import { Github, Linkedin, Mail, Code2, Database, Palette, Zap } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Code2,
+  Database,
+  Palette,
+  Zap,
+  Globe,
+} from "lucide-react";
 import Navbar from "@/components/Navbar";
+
+import ERICK from "../assets/img/members/ERICK_SANTANA.png";
+import EVELYN from "../assets/img/members/EVELYN_LAMARCA.png";
+import JOSUE from "../assets/img/members/JOSUE_VIEGAS.png";
+import LIVIA from "../assets/img/members/LIVIA_CAMPOS.png";
+import MATHEUS from "../assets/img/members/MATHEUS_BASTOS.jpg";
+import RENAN from "../assets/img/members/RENAN_LIMA.png";
+
 
 const teamMembers = [
   {
-    name: "Ana Silva",
-    role: "Product Lead & Full-Stack Developer",
-    image: "AS",
+    name: "Erick Santana",
+    role: "Desenvolvedor",
+    image: ERICK,
     imageBg: "bg-blue-500",
-    bio: "Arquiteta de soluções escaláveis com expertise em Node.js",
+    linkedin: "https://www.linkedin.com/in/erickystn/",
+    github:"https://github.com/erickystn",
+    site:"https://github.com/erickystn",
   },
   {
-    name: "Carlos Oliveira",
-    role: "Backend Lead & DevOps",
-    image: "CO",
+    name: "Evelyn Lamarca",
+    role: "Desenvolvedora",
+    image: EVELYN,
     imageBg: "bg-green-500",
-    bio: "Especialista em infraestrutura e otimização de performance",
+    linkedin: "https://www.linkedin.com/in/evelyn-lamarca/",
+    github:'https://github.com/evelynlamarca',
+    site:'https://github.com/evelynlamarca',
   },
   {
-    name: "Marina Costa",
-    role: "Frontend Lead & UI/UX Designer",
-    image: "MC",
+    name: "Josue Viegas",
+    role: "Desenvolvedor",
+    image: JOSUE,
     imageBg: "bg-purple-500",
-    bio: "Criadora de design systems e interfaces modernas",
+    linkedin: "https://www.linkedin.com/in/josue-viegas-desenvolvedor-web/",
+    github:"https://github.com/Jbviegas",
+    site:"https://github.com/Jbviegas",
+ 
   },
   {
-    name: "Rafael Mendes",
-    role: "Senior Developer & Technical Architect",
-    image: "RM",
+    name: "Lívia Campos",
+    role: "Desenvolvedora",
+    image: LIVIA,
     imageBg: "bg-cyan-500",
-    bio: "Arquiteto técnico especializado em TypeScript",
+    linkedin: "https://www.linkedin.com/in/livmachado/",
+    github:"https://github.com/livmachado",
+    site:"https://livmachado.github.io/portfolio/",
   },
   {
-    name: "Juliana Ferreira",
-    role: "QA Lead & Product Manager",
-    image: "JF",
+    name: "Matheus Bastos",
+    role: "Desenvolvedor",
+    image: MATHEUS,
     imageBg: "bg-pink-500",
-    bio: "Garantia de qualidade e experiência do usuário",
+ 
+    linkedin: "https://www.linkedin.com/in/matheus-moura-bastos",
+    github:"https://github.com/bastosmatheusm",
+    site:"https://github.com/bastosmatheusm",
   },
   {
-    name: "Lucas Almeida",
-    role: "Database & Security Engineer",
-    image: "LA",
+    name: "Renan Lima",
+    role: "Desenvolvedor",
+    image: RENAN,
     imageBg: "bg-orange-500",
-    bio: "Especialista em segurança e integridade de dados",
+ 
+    linkedin: "https://www.linkedin.com/in/renanferreiralima",
+    github:"https://github.com/renanferreiraslima-hub",
+    site:"https://github.com/renanferreiraslima-hub",
   },
 ];
+ 
 
 const stacks = [
   {
     name: "Frontend",
     icon: Palette,
-    technologies: ["React 19", "TypeScript", "Tailwind CSS", "Vite", "Next.js"],
+    technologies: ["React 19", "TypeScript", "Tailwind CSS", "Vite"],
   },
   {
     name: "Backend",
@@ -66,25 +99,29 @@ const stacks = [
   {
     name: "Database",
     icon: Database,
-    technologies: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Prisma ORM"],
+    technologies: ["MySQL", "PostgreSQL", "TypeOrm"],
   },
   {
     name: "DevOps & Tools",
     icon: Zap,
-    technologies: ["Docker", "GitHub", "Render", "AWS", "CI/CD Pipelines"],
+    technologies: ["GitHub", "Render", "Vercel", "CI/CD Pipelines"],
   },
 ];
 
 export default function About() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div
+      className="min-h-screen"
+      style={{ fontFamily: "'Outfit', sans-serif" }}
+    >
       <Navbar />
 
       {/* Hero */}
       <section
         className="relative min-h-[60vh] flex items-center overflow-hidden pt-24"
         style={{
-          background: "linear-gradient(135deg, #0A1628 0%, #0F172A 50%, #0D1B35 100%)",
+          background:
+            "linear-gradient(135deg, #0A1628 0%, #0F172A 50%, #0D1B35 100%)",
         }}
       >
         {/* Grid overlay */}
@@ -94,7 +131,8 @@ export default function About() {
         <div
           className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
           style={{
-            background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
           }}
         />
 
@@ -105,12 +143,13 @@ export default function About() {
           </div>
 
           <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
-            Desenvolvemos projetos de <span className="text-blue-400">qualidade</span>.
+            Desenvolvemos projetos de{" "}
+            <span className="text-blue-400">qualidade</span>.
           </h1>
 
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Somos uma equipe de 6 desenvolvedores apaixonados por criar soluções inovadoras e
-            escaláveis que transformam ideias em realidade.
+            Somos uma equipe de 6 desenvolvedores apaixonados por criar soluções
+            inovadoras e escaláveis que transformam ideias em realidade.
           </p>
         </div>
       </section>
@@ -124,7 +163,9 @@ export default function About() {
         <div className="absolute inset-0 grid-bg opacity-30" />
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-          <h2 className="text-4xl font-black text-white text-center mb-16">Nosso Time</h2>
+          <h2 className="text-4xl font-black text-white text-center mb-16">
+            Nosso Time
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
@@ -134,40 +175,47 @@ export default function About() {
               >
                 {/* Avatar */}
                 <div className="flex justify-center mb-6">
-                  <div
-                    className={`w-20 h-20 rounded-full ${member.imageBg} flex items-center justify-center text-white text-2xl font-black group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-current/20`}
-                  >
-                    {member.image}
+                  <div className="flex justify-center mb-6">
+                    <div className="w-40 h-40 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 {/* Info */}
-                <h3 className="text-white font-bold text-lg text-center mb-1">{member.name}</h3>
-                <p className="text-blue-400 text-sm font-semibold text-center mb-3">{member.role}</p>
-                <p className="text-slate-400 text-sm leading-relaxed text-center mb-6">{member.bio}</p>
+                <h3 className="text-white font-bold text-lg text-center mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-blue-400 text-sm font-semibold text-center mb-3">
+                  {member.role}
+                </p>
 
                 {/* Socials */}
                 <div className="flex items-center justify-center gap-3 pt-6 border-t border-white/10">
                   <a
-                    href="#"
+                    href={member.github} target="_blank"
                     className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
                     title="GitHub"
                   >
                     <Github className="w-4 h-4" />
                   </a>
                   <a
-                    href="#"
+                   href={member.linkedin} target="_blank"
                     className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
                     title="LinkedIn"
                   >
                     <Linkedin className="w-4 h-4" />
                   </a>
                   <a
-                    href="#"
+                    href={member.site} target="_blank"
                     className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
                     title="E-mail"
                   >
-                    <Mail className="w-4 h-4" />
+                    <Globe className="w-4 h-4" />
                   </a>
                 </div>
               </div>
@@ -179,13 +227,17 @@ export default function About() {
       {/* Stacks */}
       <section
         className="relative py-24 lg:py-32 overflow-hidden"
-        style={{ background: "linear-gradient(180deg, #0F172A 0%, #0A1628 100%)" }}
+        style={{
+          background: "linear-gradient(180deg, #0F172A 0%, #0A1628 100%)",
+        }}
       >
         {/* Grid */}
         <div className="absolute inset-0 grid-bg opacity-40" />
 
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
-          <h2 className="text-4xl font-black text-white text-center mb-16">Stacks que Dominamos</h2>
+          <h2 className="text-4xl font-black text-white text-center mb-16">
+            Stacks que Dominamos
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {stacks.map((stack) => {
@@ -199,7 +251,9 @@ export default function About() {
                     <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center">
                       <Icon className="w-6 h-6 text-blue-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{stack.name}</h3>
+                    <h3 className="text-xl font-bold text-white">
+                      {stack.name}
+                    </h3>
                   </div>
 
                   <div className="flex flex-wrap gap-2">
@@ -236,7 +290,9 @@ export default function About() {
               { value: "24/7", label: "Suporte Técnico" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl lg:text-4xl font-black text-blue-400">{stat.value}</p>
+                <p className="text-3xl lg:text-4xl font-black text-blue-400">
+                  {stat.value}
+                </p>
                 <p className="text-slate-500 text-sm mt-2">{stat.label}</p>
               </div>
             ))}
@@ -254,13 +310,17 @@ export default function About() {
             Entre em <span className="text-blue-400">Contato</span>
           </h2>
           <p className="text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-            Tem dúvidas ou quer conhecer mais sobre a RiverTech? Estamos aqui para ajudar!
+            Tem dúvidas ou quer conhecer mais sobre a RiverTech? Estamos aqui
+            para ajudar!
           </p>
 
           <div className="space-y-4 mb-8">
             <p className="text-slate-300">
               <strong>Email:</strong>{" "}
-              <a href="mailto:contato@rivertech.com" className="text-blue-400 hover:text-blue-300">
+              <a
+                href="mailto:contato@rivertech.com"
+                className="text-blue-400 hover:text-blue-300"
+              >
                 contato@rivertech.com
               </a>
             </p>

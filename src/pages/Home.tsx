@@ -25,7 +25,6 @@ export default function Home() {
       <SolutionSection />
       <HowItWorksSection />
       <RoadmapSection />
-      <TestimonialsSection />
       <ContactFormSection />
       <CtaSection />
     </div>

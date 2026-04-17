@@ -3,18 +3,18 @@
    Timeline Q3 2026 → Q4 2026 → Q1 2027
    ============================================================= */
 
-import { Monitor, CreditCard, Brain } from "lucide-react";
+import { Monitor, CreditCard, Brain, FileText, MessageCircle } from "lucide-react";
 
 const roadmap = [
   {
     quarter: "Q3 2026",
-    icon: Monitor,
+    icon: FileText,
     color: "text-blue-400",
     bg: "bg-blue-500/15",
     border: "border-blue-500/40",
     lineColor: "bg-blue-500",
-    title: "Frontend Web",
-    desc: "Interface web completa para gestão de apólices, sinistros e perfil do usuário. Dashboard com histórico e notificações em tempo real.",
+    title: "Geração de PDF e Dashboards",
+    desc: "Implementação de gráficos em tempo real no painel administrativo e exportação automática de apólices em PDF para envio imediato aos clientes.",
     status: "Em desenvolvimento",
     statusColor: "text-blue-400 bg-blue-500/10 border-blue-500/20",
   },
@@ -26,19 +26,19 @@ const roadmap = [
     border: "border-purple-500/40",
     lineColor: "bg-purple-500",
     title: "Gateways de Pagamento",
-    desc: "Integração com Stripe, PIX e boleto bancário. Cobrança recorrente automática e gestão de inadimplência.",
+    desc: "Integração com Stripe e processadores locais para permitir cobrança automática, gestão de inadimplência e renovação de assinaturas.",
     status: "Planejado",
     statusColor: "text-purple-400 bg-purple-500/10 border-purple-500/20",
   },
   {
     quarter: "Q1 2027",
-    icon: Brain,
+    icon: MessageCircle,
     color: "text-green-400",
     bg: "bg-green-500/15",
     border: "border-green-500/40",
     lineColor: "bg-green-500",
-    title: "IA Antifraude",
-    desc: "Sistema de machine learning para detecção de fraudes em tempo real. Análise comportamental e scoring de risco por cliente.",
+    title: "Integração WhatsApp API",
+    desc: "Conexão oficial com a API do WhatsApp para automatizar mensagens de saudação, envio de status da apólice e alertas de renovação direto no celular do cliente.",
     status: "Futuro",
     statusColor: "text-green-400 bg-green-500/10 border-green-500/20",
   },

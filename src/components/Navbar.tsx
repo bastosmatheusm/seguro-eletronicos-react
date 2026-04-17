@@ -20,8 +20,9 @@ export default function Navbar() {
     { label: "Produto", href: "/#produto" },
     { label: "Cobertura", href: "/#cobertura" },
     { label: "Como Funciona", href: "/#como-funciona" },
-    { label: "Sobre", href: "/about" },
+    
     { label: "Contato", href: "/#contato" },
+    { label: "Sobre Nós", href: "/about" },
   ];
 
   return (
@@ -35,7 +36,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5 group">
+          <a href="/#home" className="flex items-center gap-2.5 group">
             <div className="relative">
               <Shield
                 className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors"
@@ -75,7 +76,7 @@ export default function Navbar() {
               href="/user-login"
               className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
             >
-              Admin
+              Painel Administrativo
             </a>
 
           </div>

@@ -5,11 +5,20 @@
 
 import { Shield, CheckCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import WhatsAppIcon from "../ui/WhatsAppIcon";
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663565020813/iwQJMCYGmhzqMhmrEQANRg/riverguard-hero-bg-98HdSfVXnKt9jPVwBTvc34.webp";
-const DEVICES_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663565020813/iwQJMCYGmhzqMhmrEQANRg/riverguard-devices-en9ht4QNaVWqRT3ZL6B8eL.webp";
+const HERO_BG =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663565020813/iwQJMCYGmhzqMhmrEQANRg/riverguard-hero-bg-98HdSfVXnKt9jPVwBTvc34.webp";
+const DEVICES_IMG =
+  "https://d2xsxph8kpxj0f.cloudfront.net/310519663565020813/iwQJMCYGmhzqMhmrEQANRg/riverguard-devices-en9ht4QNaVWqRT3ZL6B8eL.webp";
 
-function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
+function AnimatedCounter({
+  target,
+  suffix = "",
+}: {
+  target: number;
+  suffix?: string;
+}) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -34,7 +43,7 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
           }, duration / steps);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -51,9 +60,11 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 export default function HeroSection() {
   return (
     <section
+      id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #0A1628 0%, #0F172A 50%, #0D1B35 100%)",
+        background:
+          "linear-gradient(135deg, #0A1628 0%, #0F172A 50%, #0D1B35 100%)",
       }}
     >
       {/* Background image */}
@@ -69,7 +80,8 @@ export default function HeroSection() {
       <div
         className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
-          background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
         }}
       />
 
@@ -87,23 +99,32 @@ export default function HeroSection() {
             <div className="space-y-3">
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight text-white">
                 Seguro de Eletrônicos{" "}
-                <span className="text-blue-400 text-blue-glow">Inteligente</span>
+                <span className="text-blue-400 text-blue-glow">
+                  Inteligente
+                </span>
                 <br />
                 para Todos
               </h1>
               <p className="text-lg lg:text-xl text-slate-400 leading-relaxed max-w-lg">
-                RiverGuard: Proteção rápida, eficiente e confiável para seus dispositivos. Processamento automático, sem burocracia.
+                RiverGuard: O seguro que respeita o seu tempo. Chame nossa
+                equipe no WhatsApp, mande a nota do aparelho e nós montamos sua
+                proteção em minutos. Sem robôs, sem burocracia.
               </p>
             </div>
 
             {/* Features list */}
             <ul className="space-y-2.5">
               {[
-                "Aprovação automática em menos de 2 minutos",
-                "Cobertura para roubo, quebra e danos elétricos",
-                "Sem vistoria prévia para dispositivos até R$5.000",
+                "Atendimento 100% humanizado e direto pelo WhatsApp.",
+
+                "Cobertura completa: roubo, furto, quebra e danos elétricos.",
+
+                "Nossa equipe emite sua apólice na hora.",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-2.5 text-slate-300 text-sm">
+                <li
+                  key={item}
+                  className="flex items-center gap-2.5 text-slate-300 text-sm"
+                >
                   <CheckCircle className="w-4 h-4 text-blue-400 shrink-0" />
                   {item}
                 </li>
@@ -116,8 +137,9 @@ export default function HeroSection() {
                 href="/user-login"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
               >
-                Painel Administrativo
-                <Shield className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                Cotar pelo WhatsApp 
+                <WhatsAppIcon size={20}/>
+                
               </a>
               <a
                 href="#como-funciona"
@@ -126,48 +148,31 @@ export default function HeroSection() {
                 Como Funciona
               </a>
             </div>
-
-            {/* Trust indicators */}
-            <div className="flex items-center gap-6 pt-2">
-              <div className="flex -space-x-2">
-                {["#3B82F6", "#10B981", "#8B5CF6", "#F59E0B"].map((color, i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-[#0F172A]"
-                    style={{ backgroundColor: color, opacity: 0.8 }}
-                  />
-                ))}
-              </div>
-              <p className="text-sm text-slate-400">
-                <span className="text-white font-semibold">+12.000</span> dispositivos protegidos
-              </p>
-            </div>
           </div>
 
           {/* Right: Visual */}
-          <div className="relative h-[500px] lg:h-[600px] flex items-center justify-center">
+          <div className="relative h-125 lg:h-150 animate-float flex items-center justify-center">
+            {/* Devices image */}
+            <img
+              src={DEVICES_IMG}
+              alt="Dispositivos protegidos"
+              className="relative z-10 w-full h-full object-contain drop-shadow-2xl rounded-2xl"
+            />
             {/* Animated background shapes */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="absolute w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse" />
               <div className="absolute w-48 h-48 bg-blue-400/5 rounded-full blur-2xl animate-pulse delay-1000" />
             </div>
 
-            {/* Devices image */}
-            <img
-              src={DEVICES_IMG}
-              alt="Dispositivos protegidos"
-              className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
-            />
-
             {/* Floating stats */}
-            <div className="absolute bottom-8 left-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-3 text-sm">
+            <div className="absolute z-20 bottom-8 left-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-3 text-sm">
               <p className="text-blue-400 font-bold">
                 <AnimatedCounter target={99} suffix="%" />
               </p>
               <p className="text-slate-300 text-xs">Uptime Garantido</p>
             </div>
 
-            <div className="absolute top-8 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-3 text-sm">
+            <div className="absolute z-20 top-8 right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-3 text-sm">
               <p className="text-green-400 font-bold">&lt;200ms</p>
               <p className="text-slate-300 text-xs">Tempo de Resposta</p>
             </div>

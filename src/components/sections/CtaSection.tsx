@@ -10,7 +10,6 @@ export default function CtaSection() {
     <>
       {/* CTA Section */}
       <section
-        id="contato"
         className="relative py-24 lg:py-32 overflow-hidden"
         style={{ background: "#0F172A" }}
       >
@@ -38,19 +37,11 @@ export default function CtaSection() {
           </div>
 
           <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-            Junte-se a mais de 12.000 usuários que já protegem seus dispositivos
-            com o sistema de seguro mais ágil do Brasil. Comece hoje, sem
-            burocracia.
+            Junte-se ao nosso grupo de clientes VIP. Proteja seu patrimônio com uma equipe que te atende pelo nome, não por um número de protocolo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#planos"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold text-base rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
-            >
-              Proteger Meu Dispositivo
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+            
             <a
               href="https://github.com/Grupo-03-Turma-JavaScript-13/seguro-eletronicos"
               target="_blank"

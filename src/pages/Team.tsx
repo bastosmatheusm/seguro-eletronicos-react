@@ -195,7 +195,7 @@ export default function Team() {
             {[
               { value: "6", label: "Desenvolvedores" },
               { value: "3", label: "Meses de Desenvolvimento" },
-              { value: "12.000+", label: "Usuários Protegidos" },
+              { value: "Usuarios", label: "VIP" },
               { value: "99.9%", label: "Uptime Garantido" },
             ].map((stat) => (
               <div key={stat.label}>

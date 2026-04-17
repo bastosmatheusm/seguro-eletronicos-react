@@ -80,7 +80,7 @@ export default function ContactFormSection() {
       const formElement = e.currentTarget;
       const formDataObj = new FormData(formElement);
 
-      const response = await fetch("https://formsubmit.co/3297e354cd75968740872847bfa4620c", {
+      const response = await fetch("https://formsubmit.co/grupo_03-turma-javascript_13@outlook.com", {
         method: "POST",
         body: formDataObj,
       });
@@ -99,7 +99,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 relative overflow-hidden">
+    <section id="contato" className="py-20 px-4 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
@@ -111,15 +111,16 @@ export default function ContactFormSection() {
             <span className="text-blue-400 text-sm font-semibold tracking-widest">ENTRE EM CONTATO</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Tem dúvidas sobre o <span className="text-blue-400">RiverGuard</span>?
+            Quer proteger seu eletrônico hoje com <span className="text-blue-400">RiverGuard</span>?
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Envie uma mensagem para nosso time. Responderemos em até 24 horas.
+             Preencha os dados abaixo ou chame no WhatsApp. Nossa equipe vai montar a melhor cobertura para você.
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {/* Contact Info Cards */}
+          <a href="mailto:grupo_03-turma-javascript_13@outlook.com">
           <div className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
@@ -131,6 +132,7 @@ export default function ContactFormSection() {
               </div>
             </div>
           </div>
+          </a>
 
           <a href="https://github.com/Grupo-03-Turma-JavaScript-13" target="_blank" rel="noopener noreferrer" className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-800/70 cursor-pointer">
             <div className="flex items-start gap-4">
@@ -151,7 +153,7 @@ export default function ContactFormSection() {
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Endereço</h3>
-                <p className="text-slate-400 text-sm">São Paulo, SP - Brasil</p>
+                <p className="text-slate-400 text-sm">Rio de Janeiro - Brasil</p>
               </div>
             </div>
           </div>
@@ -167,7 +169,7 @@ export default function ContactFormSection() {
 
           <form
             id="formulario"
-            action="https://formsubmit.co/3297e354cd75968740872847bfa4620c"
+            action="https://formsubmit.co/grupo_03-turma-javascript_13@outlook.com"
             method="POST"
             onSubmit={handleSubmit}
             className="space-y-6"

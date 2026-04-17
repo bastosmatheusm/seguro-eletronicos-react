@@ -160,7 +160,8 @@ export default function UserLogin() {
           <div className="mt-8 p-4 rounded-lg bg-blue-500/10 border border-blue-500/20">
             <p className="text-xs font-semibold text-blue-400 mb-2">Credenciais de Teste:</p>
             <div className="space-y-1 text-xs text-slate-400">
-              <p>Consulte o backend para credenciais válidas</p>
+              <p>Login: admin@email.com</p>
+              <p>Senha: adminadmin</p>
             </div>
           </div>
         </div>

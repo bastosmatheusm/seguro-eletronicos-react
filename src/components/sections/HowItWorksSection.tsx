@@ -3,44 +3,45 @@
    Timeline de 4 passos com ícones e descrições
    ============================================================= */
 
-import { UserPlus, Smartphone, FileCheck, DollarSign } from "lucide-react";
+import { UserPlus, Smartphone, FileCheck, DollarSign, Calculator, ShieldCheck, LifeBuoy } from "lucide-react";
+import WhatsappIcon from "../ui/WhatsAppIcon";
 
 const steps = [
   {
     step: "01",
-    icon: UserPlus,
+    icon: WhatsappIcon,
     color: "text-blue-400",
     bg: "bg-blue-500/15",
     border: "border-blue-500/30",
-    title: "Cadastre-se",
-    desc: "Crie sua conta com nome, CPF e e-mail. Processo 100% digital, sem documentos físicos ou visita presencial.",
+    title: "Mande um Alô",
+    desc: "Chame nosso consultor no WhatsApp e diga qual é o seu aparelho",
   },
   {
     step: "02",
-    icon: Smartphone,
+    icon: Calculator,
     color: "text-green-400",
     bg: "bg-green-500/15",
     border: "border-green-500/30",
-    title: "Registre o Dispositivo",
-    desc: "Informe marca, modelo, número de série e valor do aparelho. Nosso algoritmo calcula o prêmio em tempo real.",
+    title: "Cotação Expressa",
+    desc: "Nossa equipe avalia o modelo e te envia o valor da cobertura em tempo real.",
   },
   {
     step: "03",
-    icon: FileCheck,
+    icon: ShieldCheck,
     color: "text-yellow-400",
     bg: "bg-yellow-500/15",
     border: "border-yellow-500/30",
-    title: "Apólice Gerada",
-    desc: "Em menos de 2 minutos sua apólice é criada automaticamente com todas as coberturas e condições aplicadas.",
+    title: "Apólice Ativa",
+    desc: "Você aprova, nós registramos tudo no nosso sistema de gestão e seu eletrônico já está seguro.",
   },
   {
     step: "04",
-    icon: DollarSign,
+    icon: LifeBuoy,
     color: "text-purple-400",
     bg: "bg-purple-500/15",
     border: "border-purple-500/30",
-    title: "Sinistro Resolvido",
-    desc: "Em caso de roubo ou dano, abra o sinistro pelo app. Processamento automático com indenização em até 48h.",
+    title: "Deu ruim? Mande mensagem",
+    desc: "Nada de preencher formulários infinitos. Aconteceu algo? Chame seu consultor no Zap e nós acionamos o seguro para você.",
   },
 ];
 
@@ -75,10 +76,7 @@ export default function HowItWorksSection() {
             em{" "}
             <span className="text-green-400">4 passos simples</span>.
           </h2>
-          <p className="text-slate-400 text-lg">
-            Sem filas, sem papelada, sem ligações. Tudo resolvido no seu
-            smartphone em menos de 5 minutos.
-          </p>
+          
         </div>
 
         {/* Steps */}
@@ -96,7 +94,7 @@ export default function HowItWorksSection() {
                     <div
                       className={`w-16 h-16 rounded-2xl ${s.bg} border ${s.border} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                     >
-                      <Icon className={`w-7 h-7 ${s.color}`} />
+                      <Icon className={`w-7 h-7 ${s.color}`} size={36} />
                     </div>
                     <span
                       className={`text-xs font-mono font-bold tracking-widest ${s.color} opacity-60`}
