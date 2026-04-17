@@ -80,12 +80,12 @@ export default function CtaSection() {
                 </span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
-                O sistema de seguro de eletrônicos mais ágil do Brasil.
-                Desenvolvido pela RIVER Technology com Node.js, TypeScript e MySQL.
+                O sistema de gestão de seguros mais ágil do Brasil.
+                Desenvolvido com React, Node.js, TypeScript e PostgreSQL.
               </p>
               <div className="flex items-center gap-3 mt-5">
                 <a
-                  href="https://github.com/Grupo-03-Turma-JavaScript-13/seguro-eletronicos"
+                  href="https://github.com/Grupo-03-Turma-JavaScript-15/seguro-eletronicos"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all"
@@ -101,30 +101,25 @@ export default function CtaSection() {
               </div>
             </div>
 
-            {/* Links */}
+            {/* Links - Produto (Baseado nas seções da Home) */}
             <div>
               <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Produto</h4>
               <ul className="space-y-2.5">
-                {["Cobertura", "Planos", "Como Funciona", "Roadmap", "API Docs"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li><a href="#cobertura" className="text-slate-400 hover:text-white text-sm transition-colors">Cobertura</a></li>
+                <li><a href="#como-funciona" className="text-slate-400 hover:text-white text-sm transition-colors">Como Funciona</a></li>
+                <li><a href="#roadmap" className="text-slate-400 hover:text-white text-sm transition-colors">Roadmap</a></li>
               </ul>
             </div>
 
+            {/* Links - Empresa (Rotas Extras e Contato) */}
             <div>
               <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-widest">Empresa</h4>
               <ul className="space-y-2.5">
-                {["Sobre Nós", "Time", "Blog", "Carreiras", "Contato"].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-slate-400 hover:text-white text-sm transition-colors">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {/* Aqui está a rota /sobre separada que você mencionou */}
+                <li><a href="/sobre" className="text-slate-400 hover:text-white text-sm transition-colors">Sobre Nós</a></li>
+                <li><a href="#contato" className="text-slate-400 hover:text-white text-sm transition-colors">Contato</a></li>
+                {/* Link direto para o Front-end que arrumamos hoje cedo */}
+                <li><a href="/admin" className="text-slate-400 hover:text-white text-sm transition-colors">Painel Admin</a></li>
               </ul>
             </div>
           </div>
